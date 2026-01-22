@@ -9,5 +9,5 @@ let StatusMap = {
   done : "배송 완료"
 }
 
-let test = order.map(o => `주문 ${o.id} ` + ": " + `${StatusMap[o.status]}`);
+let test = order.map(o => `주문 ${o.id} : ${StatusMap[o.status]}`);
 console.log(test);
