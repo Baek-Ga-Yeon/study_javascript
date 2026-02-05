@@ -13,3 +13,5 @@ for (let i = 0; i < users.length; i++) {
 };
 
 console.log(result)
+
+// users.filter(u => u.isActive && !u.isBlocked);
