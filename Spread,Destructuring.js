@@ -41,3 +41,29 @@ const newDelivery = {
 
 console.log(newDelivery);
 
+//3
+
+const statusMap = {
+  paid : "결제 완료",
+  unpaid : "미결제",
+  cancelled : "결제 취소"
+}
+
+const data = [
+  { id : 1, status : "paid" },
+  { id : 2, status : "unpaid" }
+];
+
+
+const result = data.map((item) => {
+  const { id, status } = item;
+  return {
+    ...item,
+    id,
+    uiId : `item-${id}`,
+    status,
+    statusLabel : statusMap[status] ?? "알수없음",
+    isPaid : status === "paid",
+  };
+});
+console.log(result);
